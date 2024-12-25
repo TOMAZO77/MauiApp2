@@ -16,14 +16,5 @@
         {
             await Shell.Current.GoToAsync("marvel");
         }
-
-        private async void OnComicSelected(object sender, SelectionChangedEventArgs e)
-        {
-            var selectedComicPath = e.CurrentSelection.FirstOrDefault() as string;
-            if (selectedComicPath != null)
-            {
-                await Shell.Current.GoToAsync($"comicDetail?comicPath={selectedComicPath}");
-            }
-        }
     }
 }

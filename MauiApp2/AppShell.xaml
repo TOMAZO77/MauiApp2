@@ -4,16 +4,16 @@
        xmlns:local="clr-namespace:MauiApp2"
        x:Class="MauiApp2.AppShell">
 
-    <FlyoutItem Title="Home" Icon="home.png">
-        <ShellContent Route="home" ContentTemplate="{DataTemplate local:MainPage}" />
+    <FlyoutItem Title="Home" Icon="home.png" Route="home">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="DC Comics" Icon="dc.png">
-        <ShellContent Route="dc" ContentTemplate="{DataTemplate local:DCComicsPage}" />
+    <FlyoutItem Title="DC Comics" Icon="dc.png" Route="dc">
+        <ShellContent ContentTemplate="{DataTemplate local:DCComicsPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Marvel Comics" Icon="marvel.png">
-        <ShellContent Route="marvel" ContentTemplate="{DataTemplate local:MarvelComicsPage}" />
+    <FlyoutItem Title="Marvel Comics" Icon="marvel.png" Route="marvel">
+        <ShellContent ContentTemplate="{DataTemplate local:MarvelComicsPage}" />
     </FlyoutItem>
 
 </Shell>

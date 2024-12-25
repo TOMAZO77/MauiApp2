@@ -35,6 +35,8 @@ namespace MauiApp2
             var selectedComicPath = e.CurrentSelection.FirstOrDefault() as string;
             if (selectedComicPath != null)
             {
+                // Deselect the comic to allow reopening the same comic
+                ((CollectionView)sender).SelectedItem = null;
                 await Shell.Current.GoToAsync($"comicDetail?comicPath={selectedComicPath}");
             }
         }
