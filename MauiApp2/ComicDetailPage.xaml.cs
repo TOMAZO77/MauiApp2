@@ -28,13 +28,13 @@ namespace MauiApp2
 
         private async void OnBackButtonClicked(object sender, EventArgs e)
         {
-            if (Navigation.NavigationStack.Count > 1)
+            if (Shell.Current.Navigation.NavigationStack.Count > 1)
             {
-                await Navigation.PopAsync();
+                await Shell.Current.Navigation.PopAsync();
             }
             else
             {
-                await Shell.Current.GoToAsync("//main");
+                await Shell.Current.GoToAsync("//home");
             }
         }
     }

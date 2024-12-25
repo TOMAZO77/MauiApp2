@@ -6,21 +6,21 @@
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("main", typeof(MainPage));
+            Routing.RegisterRoute("home", typeof(MainPage));
             Routing.RegisterRoute("dc", typeof(DCComicsPage));
             Routing.RegisterRoute("marvel", typeof(MarvelComicsPage));
         }
 
         protected override bool OnBackButtonPressed()
         {
-            if (Navigation.NavigationStack.Count > 1)
+            if (Shell.Current.Navigation.NavigationStack.Count > 1)
             {
-                Navigation.PopAsync();
+                Shell.Current.Navigation.PopAsync();
                 return true;
             }
             else
             {
-                Shell.Current.GoToAsync("//main");
+                Shell.Current.GoToAsync("//home");
                 return true;
             }
         }

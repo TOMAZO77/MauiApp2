@@ -6,7 +6,7 @@
 
     <!-- Home Page -->
     <FlyoutItem Title="Home" Icon="icon_home.png">
-        <ShellContent Route="main" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Route="home" ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
     <!-- DC Comics -->
