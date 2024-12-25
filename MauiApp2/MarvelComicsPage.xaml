@@ -11,7 +11,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
-                        <Image Source="{Binding}" HeightRequest="250" WidthRequest="175" Margin="10" />
+                        <Image Source="{Binding}" HeightRequest="450" WidthRequest="350" Margin="10" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

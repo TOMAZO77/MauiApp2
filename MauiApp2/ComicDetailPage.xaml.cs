@@ -25,21 +25,5 @@ namespace MauiApp2
 
             return pages;
         }
-
-        private void OnPreviousClicked(object sender, EventArgs e)
-        {
-            if (carouselView.Position > 0)
-            {
-                carouselView.Position--;
-            }
-        }
-
-        private void OnNextClicked(object sender, EventArgs e)
-        {
-            if (carouselView.Position < ComicPages.Count - 1)
-            {
-                carouselView.Position++;
-            }
-        }
     }
 }

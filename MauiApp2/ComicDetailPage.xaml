@@ -4,31 +4,21 @@
              x:Class="MauiApp2.ComicDetailPage">
 
     <ContentPage.Content>
-        <StackLayout>
-            <CarouselView x:Name="carouselView" ItemsSource="{Binding ComicPages}"
-                          VerticalOptions="FillAndExpand"
-                          HorizontalOptions="FillAndExpand"
-                          PeekAreaInsets="20,0,20,0">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10">
-                            <Image Source="{Binding}" Aspect="AspectFit" Margin="10" HeightRequest="600" />
-                        </Grid>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-                <Button Text="Previous" Clicked="OnPreviousClicked" 
-                        BackgroundColor="LightGray"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        Margin="5" />
-                <Button Text="Next" Clicked="OnNextClicked" 
-                        BackgroundColor="LightGray"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        Margin="5" />
-            </StackLayout>
-        </StackLayout>
+        <ScrollView>
+            <VerticalStackLayout>
+                <CollectionView ItemsSource="{Binding ComicPages}"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Margin="10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Image Source="{Binding}" Aspect="AspectFit" Margin="10" HeightRequest="800" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
