@@ -1,6 +1,4 @@
-using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
-using System.IO;
 
 namespace MauiApp2
 {

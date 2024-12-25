@@ -6,10 +6,13 @@
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding ComicPages}"
                       VerticalOptions="FillAndExpand"
-                      HorizontalOptions="FillAndExpand">
+                      HorizontalOptions="FillAndExpand"
+                      PeekAreaInsets="20,0,20,0">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding}" Aspect="AspectFit" />
+                    <Grid Padding="10">
+                        <Image Source="{Binding}" Aspect="AspectFit" Margin="10" />
+                    </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
