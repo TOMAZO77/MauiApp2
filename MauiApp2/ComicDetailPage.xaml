@@ -3,23 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.ComicDetailPage">
 
-    <ContentPage.Content>
-        <ScrollView>
-            <VerticalStackLayout>
-                <CollectionView ItemsSource="{Binding ComicPages}"
-                                VerticalOptions="FillAndExpand"
-                                HorizontalOptions="FillAndExpand"
-                                Margin="10">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Padding="10">
-                                <Image Source="{Binding}" Aspect="AspectFit" Margin="10" HeightRequest="1000" />
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-                <Image Source="down-arrow.png" HorizontalOptions="Center" HeightRequest="30" />
-            </VerticalStackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+    <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="10">
+        <Button Text="Back" Clicked="OnBackButtonClicked" BackgroundColor="Transparent" TextColor="Black" />
+    </StackLayout>
+    <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <VerticalStackLayout>
+            <CollectionView ItemsSource="{Binding ComicPages}"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0">
+                            <Image Source="{Binding}" Aspect="AspectFit" Margin="0" HeightRequest="1200" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Image Source="down-arrow.png" HorizontalOptions="Center" HeightRequest="30" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

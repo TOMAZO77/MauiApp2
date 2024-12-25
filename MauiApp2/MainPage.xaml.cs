@@ -9,12 +9,12 @@
 
         private async void OnDCComicsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DCComicsPage());
+            await Shell.Current.GoToAsync("dc");
         }
 
         private async void OnMarvelComicsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MarvelComicsPage());
+            await Shell.Current.GoToAsync("marvel");
         }
     }
 }
