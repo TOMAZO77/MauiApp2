@@ -6,11 +6,12 @@
     <ContentPage.Content>
         <CollectionView ItemsSource="{Binding ComicCovers}"
                         SelectionMode="Single"
-                        SelectionChanged="OnComicSelected">
+                        SelectionChanged="OnComicSelected"
+                        Margin="10">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
-                        <Image Source="{Binding}" HeightRequest="200" WidthRequest="150" Margin="5" />
+                        <Image Source="{Binding}" HeightRequest="250" WidthRequest="175" Margin="10" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
