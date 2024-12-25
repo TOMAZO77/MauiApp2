@@ -25,5 +25,15 @@ namespace MauiApp2
 
             return pages;
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            if (Navigation.NavigationStack.Count > 1)
+            {
+                Navigation.PopAsync();
+                return true;
+            }
+            return base.OnBackButtonPressed();
+        }
     }
 }

@@ -13,11 +13,12 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="10">
-                                <Image Source="{Binding}" Aspect="AspectFit" Margin="10" HeightRequest="800" />
+                                <Image Source="{Binding}" Aspect="AspectFit" Margin="10" HeightRequest="1000" />
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+                <Image Source="down-arrow.png" HorizontalOptions="Center" HeightRequest="30" />
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
