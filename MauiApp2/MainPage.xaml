@@ -22,7 +22,7 @@
                    VerticalTextAlignment="Center" />
 
             <Button Text="DC COMICS"
-                    Clicked="OnDCComicsClicked"
+                    Clicked="OnNavigateToDCComics"
                     WidthRequest="200"
                     BackgroundColor="Black"
                     BorderColor="White"
@@ -31,7 +31,7 @@
                     FontFamily="ComicSansMS" />
 
             <Button Text="MARVEL COMICS"
-                    Clicked="OnMarvelComicsClicked"
+                    Clicked="OnNavigateToMarvelComics"
                     WidthRequest="200"
                     BackgroundColor="Black"
                     BorderColor="White"
