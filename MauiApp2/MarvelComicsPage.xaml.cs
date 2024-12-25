@@ -35,8 +35,7 @@ namespace MauiApp2
             var selectedComicPath = e.CurrentSelection.FirstOrDefault() as string;
             if (selectedComicPath != null)
             {
-                var comicPage = new ComicDetailPage(selectedComicPath);
-                await Navigation.PushAsync(comicPage);
+                await Shell.Current.GoToAsync($"comicDetail?comicPath={selectedComicPath}");
             }
         }
     }

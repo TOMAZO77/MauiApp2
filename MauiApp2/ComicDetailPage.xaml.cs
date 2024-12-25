@@ -1,16 +1,27 @@
 using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
 
 namespace MauiApp2
 {
+    [QueryProperty(nameof(ComicPath), "comicPath")]
     public partial class ComicDetailPage : ContentPage
     {
         public ObservableCollection<string> ComicPages { get; set; }
+        public string ComicPath { get; set; }
 
-        public ComicDetailPage(string comicPath)
+        public ComicDetailPage()
         {
             InitializeComponent();
-            ComicPages = LoadComicPages(Path.GetDirectoryName(comicPath));
-            BindingContext = this;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (!string.IsNullOrEmpty(ComicPath))
+            {
+                ComicPages = LoadComicPages(Path.GetDirectoryName(ComicPath));
+                BindingContext = this;
+            }
         }
 
         private ObservableCollection<string> LoadComicPages(string folderPath)

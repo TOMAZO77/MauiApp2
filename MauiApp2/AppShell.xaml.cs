@@ -9,7 +9,7 @@
             Routing.RegisterRoute("home", typeof(MainPage));
             Routing.RegisterRoute("dc", typeof(DCComicsPage));
             Routing.RegisterRoute("marvel", typeof(MarvelComicsPage));
-            Routing.RegisterRoute("comicDetail", typeof(ComicDetailPage)); // Add this line
+            Routing.RegisterRoute("comicDetail", typeof(ComicDetailPage));
         }
 
         protected override bool OnBackButtonPressed()
