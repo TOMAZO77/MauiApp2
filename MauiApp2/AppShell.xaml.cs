@@ -6,12 +6,14 @@
         {
             InitializeComponent();
 
+            // register routes for navigation
             Routing.RegisterRoute("home", typeof(MainPage));
             Routing.RegisterRoute("dc", typeof(DCComicsPage));
             Routing.RegisterRoute("marvel", typeof(MarvelComicsPage));
             Routing.RegisterRoute("comicDetail", typeof(ComicDetailPage));
         }
 
+        // handle back button press
         protected override bool OnBackButtonPressed()
         {
             if (Shell.Current.Navigation.NavigationStack.Count > 1)

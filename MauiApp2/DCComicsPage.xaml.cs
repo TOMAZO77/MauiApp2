@@ -11,6 +11,7 @@ namespace MauiApp2
             InitializeComponent();
             ComicCovers = LoadComicCovers(@"C:\Users\Xemen\Downloads\Comics\DC");
             BindingContext = this;
+            // set the data context and load comic covers
         }
 
         private ObservableCollection<string> LoadComicCovers(string folderPath)
@@ -24,6 +25,7 @@ namespace MauiApp2
                 if (cover != null)
                 {
                     covers.Add(cover);
+                    // add comic cover to the collection
                 }
             }
 
@@ -38,6 +40,7 @@ namespace MauiApp2
                 // Deselect the comic to allow reopening the same comic
                 ((CollectionView)sender).SelectedItem = null;
                 await Shell.Current.GoToAsync($"comicDetail?comicPath={selectedComicPath}");
+                // navigate to comic detail page
             }
         }
     }

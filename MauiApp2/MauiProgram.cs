@@ -14,12 +14,15 @@ namespace MauiApp2
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            // sets up the app with some fonts
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+            // enables debug logging if in debug mode
 
             return builder.Build();
+            // builds and returns the Maui app
         }
     }
 }

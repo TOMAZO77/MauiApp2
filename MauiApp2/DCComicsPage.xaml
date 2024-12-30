@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- xml version and encoding -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.DCComicsPage">
@@ -8,10 +9,12 @@
                         SelectionMode="Single"
                         SelectionChanged="OnComicSelected"
                         Margin="10">
+            <!-- collection view to display comic covers -->
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
                         <Image Source="{Binding}" HeightRequest="540" WidthRequest="420" Margin="10" />
+                        <!-- image for each comic cover -->
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

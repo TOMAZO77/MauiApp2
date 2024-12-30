@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- xml version and encoding -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.ComicDetailPage">
+    <!-- page for comic details -->
 
-    <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="10">
+    <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="10" Orientation="Horizontal" Spacing="10">
         <Button Text="Back" Clicked="OnBackButtonClicked" BackgroundColor="Transparent" TextColor="Black" />
+        <Button Text="Home" Clicked="OnHomeButtonClicked" BackgroundColor="Transparent" TextColor="Black" WidthRequest="100" HeightRequest="40" FontSize="14" />
+        <!-- back and home buttons with click handlers -->
     </StackLayout>
+    <SearchBar x:Name="searchBar" Placeholder="Search comics..." SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" />
+    <!-- search bar for comics -->
+
+    <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+    <!-- loading indicator -->
+
     <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <VerticalStackLayout>
-            <CollectionView ItemsSource="{Binding ComicPages}"
+            <CollectionView ItemsSource="{Binding FilteredComicPages}"
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand"
                             Margin="0">
@@ -16,11 +26,13 @@
                     <DataTemplate>
                         <Grid Padding="0">
                             <Image Source="{Binding}" Aspect="AspectFit" Margin="0" HeightRequest="1200" />
+                            <!-- displaying comic images in a grid -->
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <Image Source="down-arrow.png" HorizontalOptions="Center" HeightRequest="30" />
+            <!-- down arrow image at the bottom -->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- xml version and encoding -->
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:MauiApp2"
        x:Class="MauiApp2.AppShell">
+    <!-- setting up the app's main navigation -->
 
     <FlyoutItem Title="Home" Icon="home.png" Route="home">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        <!-- home button, links to MainPage.xaml -->
     </FlyoutItem>
 
     <FlyoutItem Title="DC Comics" Icon="dc.png" Route="dc">
         <ShellContent ContentTemplate="{DataTemplate local:DCComicsPage}" />
+        <!-- dc comics button, links to DCComicsPage.xaml -->
     </FlyoutItem>
 
     <FlyoutItem Title="Marvel Comics" Icon="marvel.png" Route="marvel">
         <ShellContent ContentTemplate="{DataTemplate local:MarvelComicsPage}" />
+        <!-- marvel comics button, links to MarvelComicsPage.xaml -->
     </FlyoutItem>
 
 </Shell>
